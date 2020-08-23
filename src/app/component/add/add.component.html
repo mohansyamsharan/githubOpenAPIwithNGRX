@@ -1,0 +1,26 @@
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6" *ngFor="let item of gitRepos">
+    
+                <div class="card hovercard">
+                    <div class="cardheader">
+    
+                    </div>
+                    <div class="avatar">
+                        <img alt="" [src]="item.avatar_url" >
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a target="_blank" href="https://scripteden.com/">{{item.login}}</a>
+                        </div>
+                        <div class="desc"><a [href]="item.html_url" target="_blank">{{item.html_url}}</a></div>
+                    </div>
+                    <div>
+                        <button class="btn btn-danger btn-sm" (click)="onSubmitAddForm(item)">Favorite</button>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+    </div>
